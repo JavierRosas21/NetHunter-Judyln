@@ -2,15 +2,17 @@
 
 ## English
 
-### Judyln layout
+### Judyln NetHunter Kernel - LG G7 (Judyln)
 
-This repository contains the NetHunter build scripts and patches only.
+This repository contains the NetHunter build scripts and patches optimized for the **LG G7 (judyln)** device.
 Clone the kernel source separately and point the builder to it.
 
-Example (sibling directory):
+The build configurations are pre-configured in the scripts to ensure seamless compilation without compatibility issues.
+
+**Clone the LineageOS kernel source:**
 
 ```console
-$ git clone <kernel-source-url> ../android_kernel_lge_sdm845
+$ git clone https://github.com/LineageOS/android_kernel_lge_sdm845.git ../android_kernel_lge_sdm845
 ```
 
 If your kernel source is elsewhere, set it in `local.config`:
@@ -19,9 +21,11 @@ If your kernel source is elsewhere, set it in `local.config`:
 KDIR=/path/to/android_kernel_lge_sdm845
 KERNEL_DIR=/path/to/android_kernel_lge_sdm845
 CONFIG=lineageos_judyln_defconfig
+ARCH=arm64
+CC=clang
 ```
 
-All patches under `patches/` are currently applied and working.
+All patches under `patches/` are currently applied and working correctly.
 
 ### Installation
 
@@ -38,28 +42,32 @@ Important: Changes should not be made in this file. Copy it across to `local.con
 
 The settings in `local.config` overwrites `config` but will itself not be overwritten by updates.
 
-## Espanol
+## Español
 
-### Estructura Judyln
+### Kernel NetHunter Judyln - LG G7 (Judyln)
 
-Este repositorio contiene solo los scripts de build y parches de NetHunter.
+Este repositorio contiene los scripts de build y parches de NetHunter optimizados para el dispositivo **LG G7 (judyln)**.
 Clona el source del kernel por separado y apunta el builder a ese path.
 
-Ejemplo (directorio hermano):
+Las configuraciones de compilación están pre-configuradas en los scripts para garantizar una compilación sin problemas de compatibilidad.
+
+**Clona el source del kernel de LineageOS:**
 
 ```console
-$ git clone <kernel-source-url> ../android_kernel_lge_sdm845
+$ git clone https://github.com/LineageOS/android_kernel_lge_sdm845.git ../android_kernel_lge_sdm845
 ```
 
-Si tu source esta en otro lugar, configuralo en `local.config`:
+Si tu source está en otro lugar, configúralo en `local.config`:
 
 ```bash
 KDIR=/path/to/android_kernel_lge_sdm845
 KERNEL_DIR=/path/to/android_kernel_lge_sdm845
 CONFIG=lineageos_judyln_defconfig
+ARCH=arm64
+CC=clang
 ```
 
-Todos los parches en `patches/` estan aplicados y funcionando.
+Todos los parches en `patches/` están aplicados y funcionando correctamente.
 
 ### Instalacion
 
