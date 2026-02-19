@@ -27,20 +27,17 @@ CC=clang
 
 All patches under `patches/` are currently applied and working correctly.
 
-### Installation
+### Setup
 
-Clone this repository into your kernel source tree, e.g.
+Clone both repositories as siblings:
 
 ```console
-$ cd android_kernel_oneplus_sm8150/
-$ git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel-builder.git
+$ mkdir -p NetHunter-G7 && cd NetHunter-G7
+$ git clone https://github.com/LineageOS/android_kernel_lge_sdm845.git
+$ git clone https://github.com/JavierRosas21/NetHunter-Judyln.git kali-nethunter-kernel
 ```
 
-**cd** into `kali-nethunter-kernel/`, open `config` and make sure that you are happy with all the settings.
-
-Important: Changes should not be made in this file. Copy it across to `local.config` and delete everything except the parameters you would like to change. Change those parameters and save it.
-
-The settings in `local.config` overwrites `config` but will itself not be overwritten by updates.
+The build script automatically detects the kernel source. Edit `kali-nethunter-kernel/local.config` only if needed (don't edit `config`). Settings in `local.config` take precedence and persist across updates.
 
 ## Español
 
@@ -69,17 +66,14 @@ CC=clang
 
 Todos los parches en `patches/` están aplicados y funcionando correctamente.
 
-### Instalacion
+### Configuracion
 
-Clona este repositorio dentro del arbol de tu kernel, por ejemplo:
+Clona ambos repositorios como directorios hermanos:
 
 ```console
-$ cd android_kernel_oneplus_sm8150/
-$ git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel-builder.git
+$ mkdir -p NetHunter-G7 && cd NetHunter-G7
+$ git clone https://github.com/LineageOS/android_kernel_lge_sdm845.git
+$ git clone https://github.com/JavierRosas21/NetHunter-Judyln.git kali-nethunter-kernel
 ```
 
-Entra a `kali-nethunter-kernel/`, abre `config` y revisa las opciones.
-
-Importante: no edites `config`. Copialo a `local.config` y deja solo los parametros que quieras cambiar.
-
-Los valores en `local.config` sobrescriben `config` pero no se sobreescriben en futuras actualizaciones.
+El script de build detecta automáticamente el source del kernel. Edita `kali-nethunter-kernel/local.config` solo si es necesario (no edites `config`). Los valores en `local.config` tienen prioridad y persisten entre actualizaciones.
