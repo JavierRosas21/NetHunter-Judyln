@@ -5,6 +5,10 @@ out
 output
 toolchain_archs
 
+# Local artifacts
+.zip
+kernel
+
 anykernel3/modules
 
 

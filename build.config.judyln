@@ -1,0 +1,7 @@
+KERNEL_NAME="NetHunter-G7-Javi"
+ARCH=arm64
+KERNEL_DIR=../android_kernel_lge_sdm845
+DEFCONFIG=lineageos_judyln_defconfig
+COMPILER=clang
+CLANG_VERSION=
+NETHUNTER_PATCHES=1
